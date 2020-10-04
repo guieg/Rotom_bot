@@ -57,10 +57,11 @@ if __name__ == '__main__':
     database = Database()
 
     #Starting the bot
+    print('Starting...')
     Rotom = RotomBot(database)
     updater = Updater(Rotom.botToken, use_context=True)
     dp = updater.dispatcher
-
+    print('The bot is up! Press Ctrl-C to stop.')
     #adding handlers
     # Informations
     dp.add_handler(CommandHandler("help", Rotom._help, pass_user_data=True))
